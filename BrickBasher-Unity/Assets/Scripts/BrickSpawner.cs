@@ -14,13 +14,14 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class BrickSpawner : MonoBehaviour
-{
+{   
+    /**VARIABLES**/
    
-    public GameObject brickPrefab; 
-    public float paddingBetweenBricks = 0.25f; 
-    private Vector2 brickPadding = new Vector2(0,0);  
+    public GameObject brickPrefab;                      //prefab of the bricks objects to create
+    public float paddingBetweenBricks = 0.25f;          //the space between adjacent bricks
+    private Vector2 brickPadding = new Vector2(0,0);    //used to apply paddingBetweenBricks to two dimensions
 
-
+    /**METHODS**/
     // Start is called before the first frame update
     void Start()
     {
@@ -34,11 +35,11 @@ public class BrickSpawner : MonoBehaviour
         {
             for(int x=0; x < 7; x++)
             {
-                Vector3 pos = new Vector3(x * brickPadding.x , y * brickPadding.y, 0);      //Creates position of next brick
+                Vector3 pos = new Vector3(x * brickPadding.x , y * brickPadding.y, 0);                 //Creates position of next brick
               
                 GameObject brickGo = Instantiate(brickPrefab, transform);                              //Instantiates new brick object from prefab as a child of this transform
      
-                brickGo.transform.localPosition = pos;                                       //Sets position of new brick object within relative to the parent;
+                brickGo.transform.localPosition = pos;                                                 //Sets position of new brick object relative to the parent
 
             }//end for(int x=0; x < 9; x++)
         }//end for (int y=0; y < 9; y++)

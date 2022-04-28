@@ -38,18 +38,18 @@ public class Ball : MonoBehaviour
 
 
  
-
+    /**METHODS**/
 
     //Awake is called when the game loads (before Start).  Awake only once during the lifetime of the script instance.
     void Awake()
     {
-        rb = gameObject.GetComponent<Rigidbody>();
-        audioSource = gameObject.GetComponent<AudioSource>();
+        rb = gameObject.GetComponent<Rigidbody>();              //get the ball's Rigidbody component and assigns a reference to it 
+        audioSource = gameObject.GetComponent<AudioSource>();   //gets the ball's AudioSource component and assigns a reference to it
     }//end Awake()
 
 
-        // Start is called before the first frame update
-        void Start()
+    // Start is called before the first frame update
+    void Start()
     {
         SetStartingPos(); //set the starting position
 
@@ -66,11 +66,11 @@ public class Ball : MonoBehaviour
         if (!isInPlay)//If ball not in play
         {   
             //Move the ball with the paddle
-            Vector3 ballPos = transform.position;   //Get current ball position
-            ballPos.x = paddle.transform.position.x;//Sets the x value to paddle's current x position;
-            transform.position = ballPos;                //Applies modification to ball position;
+            Vector3 ballPos = transform.position;       //Get current ball position
+            ballPos.x = paddle.transform.position.x;    //Sets the x value to paddle's current x position;
+            transform.position = ballPos;               //Applies modification to ball position;
 
-            if (Input.GetKeyDown(KeyCode.Space))//Ball not in play and spacebar is pressed
+            if (Input.GetKeyDown(KeyCode.Space))//Ball is not in play and Spacebar is pressed
             {
                 isInPlay = true;                    //Set ball to be in play
                 Move();                             //Begin moving the ball
@@ -114,32 +114,28 @@ public class Ball : MonoBehaviour
     void OnCollisionEnter(Collision other)
     {
 
-        if (isInPlay) { audioSource.Play(); }                     //Plays the audioSource if ball currently bouncing around
+        if (isInPlay) { audioSource.Play(); }   //Plays the audioSource if ball currently bouncing around
         GameObject otherGO = other.gameObject;  //gets the gameObject of the collision
-        if(otherGO.tag == "Brick")//if otherGO is a "Brick"
+        if(otherGO.tag == "Brick")              //if otherGO is a "Brick"
         {
             score += 100;                       // adds 100 to the score
             Destroy(otherGO);                   // destroys the collided with gameObject
         }//end if(otherGO.tag == "Brick")
-    } //end OnColliderEnter()
+
+    } //end OnCollisionEnter()
 
     void OnTriggerEnter(Collider other)
     {
         if(other.gameObject.tag == "OutBounds") //if ball has left bounds
         {
-            numberOfBalls--;                    //deincriments the number of balls
+            numberOfBalls--;                    //deincrements the number of balls
             if (numberOfBalls > 0)              //if player has more balls
             {
-                Invoke("SetStartingPos", 2f);   //Calls SetStartingPos() after 2 second delay;
+                Invoke("SetStartingPos", 2f);   //Calls SetStartingPos() after 2 second delay, AKA rests the ball
             }//end if (numberOfBalls > 0)
 
         }//end if(other.gameObject.tag == "OutBounds")
 
     }//end void OnTriggerEnter(Collider other)
-
-
-
-
-
 
 }
