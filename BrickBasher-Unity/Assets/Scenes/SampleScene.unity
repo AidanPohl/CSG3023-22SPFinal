@@ -392,7 +392,7 @@ MonoBehaviour:
     m_FontSize: 20
     m_FontStyle: 1
     m_BestFit: 0
-    m_MinSize: 1
+    m_MinSize: 0
     m_MaxSize: 40
     m_Alignment: 0
     m_AlignByGeometry: 0
@@ -400,7 +400,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Balls : 0'
+  m_Text: 'Balls: 0'
 --- !u!222 &262223376
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -563,7 +563,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2130852922960342970, guid: 4d01d590471cd8f4595b333f9f14a272, type: 3}
       propertyPath: m_IsKinematic
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2130852922960342974, guid: 4d01d590471cd8f4595b333f9f14a272, type: 3}
       propertyPath: m_RootOrder
@@ -612,6 +612,11 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 2130852922960342971, guid: 4d01d590471cd8f4595b333f9f14a272, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 4d01d590471cd8f4595b333f9f14a272, type: 3}
+--- !u!1 &705209975 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2130852922960342969, guid: 4d01d590471cd8f4595b333f9f14a272, type: 3}
+  m_PrefabInstance: {fileID: 705209974}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -705,6 +710,103 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!1001 &783912362
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -6204120972789623110, guid: 6e5d90c710f10d94f92bb490956af9db, type: 3}
+      propertyPath: speed
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: -6204120972789623110, guid: 6e5d90c710f10d94f92bb490956af9db, type: 3}
+      propertyPath: paddle
+      value: 
+      objectReference: {fileID: 705209975}
+    - target: {fileID: -6204120972789623110, guid: 6e5d90c710f10d94f92bb490956af9db, type: 3}
+      propertyPath: ballTxt
+      value: 
+      objectReference: {fileID: 262223375}
+    - target: {fileID: -6204120972789623110, guid: 6e5d90c710f10d94f92bb490956af9db, type: 3}
+      propertyPath: scoreTxt
+      value: 
+      objectReference: {fileID: 1324228715}
+    - target: {fileID: -6204120972789623110, guid: 6e5d90c710f10d94f92bb490956af9db, type: 3}
+      propertyPath: initialForceY
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: -6204120972789623110, guid: 6e5d90c710f10d94f92bb490956af9db, type: 3}
+      propertyPath: numberOfBalls
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 488121712747221148, guid: 6e5d90c710f10d94f92bb490956af9db, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2869679261410149303, guid: 6e5d90c710f10d94f92bb490956af9db, type: 3}
+      propertyPath: m_AngularDrag
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2869679261410149303, guid: 6e5d90c710f10d94f92bb490956af9db, type: 3}
+      propertyPath: m_Constraints
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2869679261410149303, guid: 6e5d90c710f10d94f92bb490956af9db, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3438578258852740363, guid: 6e5d90c710f10d94f92bb490956af9db, type: 3}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3438578258852740363, guid: 6e5d90c710f10d94f92bb490956af9db, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3438578258852740363, guid: 6e5d90c710f10d94f92bb490956af9db, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3438578258852740363, guid: 6e5d90c710f10d94f92bb490956af9db, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3438578258852740363, guid: 6e5d90c710f10d94f92bb490956af9db, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3438578258852740363, guid: 6e5d90c710f10d94f92bb490956af9db, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3438578258852740363, guid: 6e5d90c710f10d94f92bb490956af9db, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3438578258852740363, guid: 6e5d90c710f10d94f92bb490956af9db, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3438578258852740363, guid: 6e5d90c710f10d94f92bb490956af9db, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3438578258852740363, guid: 6e5d90c710f10d94f92bb490956af9db, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3438578258852740363, guid: 6e5d90c710f10d94f92bb490956af9db, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4702670848549927286, guid: 6e5d90c710f10d94f92bb490956af9db, type: 3}
+      propertyPath: m_Name
+      value: Ball
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6e5d90c710f10d94f92bb490956af9db, type: 3}
 --- !u!4 &936427791 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8764618034497980756, guid: 9de818f6ae603814196d79d5e379dbd4, type: 3}
@@ -1000,7 +1102,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d512cfff2b18b5408376600f8ccb10c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  brickPrefab: {fileID: 0}
+  brickPrefab: {fileID: 856310540651512245, guid: c054d60aed775aa469f2b9a626c74f21, type: 3}
   paddingBetweenBricks: 0.25
 --- !u!4 &1510609908
 Transform:
